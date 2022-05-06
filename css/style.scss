@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+.current {
+    color: red;
+}
+.prevLink::before {
+    content: "";
+    display: inline-block;
+    background-image: url("../img/prev.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    right: 4px;
+    top: 6px;
+}
+.nextLink::after {
+    content: "";
+    display: inline-block;
+    background-image: url("../img/next.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 4px;
+    top: 6px;
+}
+
+.wp-block-image {
+    width: 70%;
+    margin: 0 auto;
+    img {
+        height: 200px;
+        object-fit: cover;
+    }
+}
+.rightImage {
+    position: relative;
+    top: 14px;
+    right: 8px;
+}
+.leftImage {
+    position: relative;
+    left: 4px;
+}
+.wp-block-group {
+    .wp-block-group__inner-container {
+        width: 70%;
+        margin: 0 auto;
+        p {
+            font-size: 14px;
+            line-height: 2;
+            margin: 0 0 40px 0;
+        }
+    }
+}
